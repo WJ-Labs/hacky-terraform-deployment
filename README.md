@@ -38,5 +38,8 @@
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cluster_id"></a> [cluster\_id](#output\_cluster\_id) | An identifier for the resource with format projects/{{project}}/locations/{{zone}}/clusters/{{name}} |
+| <a name="output_helm_releases_info"></a> [helm\_releases\_info](#output\_helm\_releases\_info) | A list of objects with information about the releases installed. |
 <!-- END_TF_DOCS -->

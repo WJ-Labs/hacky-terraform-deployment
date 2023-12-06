@@ -21,7 +21,7 @@ module "cluster_tooling" {
 
   namespace = each.value.namespace
 
-  values = [ for value in each.value.values: "${path.module}/${file(value)}"]
+  values = [for value in each.value.values : "${path.module}/${file(value)}"]
 
   depends_on = [
     module.google_container_cluster
