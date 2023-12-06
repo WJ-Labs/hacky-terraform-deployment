@@ -3,14 +3,17 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 defaults:
   run:
     shell: bash
 
 jobs:
-  terraform_ci:
-    runs-on: ubuntu-latest
+  terraform_cicd:
+    runs-on: [ self-hosted, Linux, X64, hacky ]
     steps:
     - name: Checkout repository 
       id: checkout_repo
@@ -33,3 +36,12 @@ jobs:
     - name: Terraform validate
       id: terraform_validate
       run: terraform validate
+
+    - name: Terraform plan
+      id: terraform_plan
+      run: terraform plan
+
+    - name: Terraform apply
+      id: terraform_apply
+      if: ${{ github.event_name == 'push' }}
+      run: terraform apply -auto-approve -input=false

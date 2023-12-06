@@ -1,0 +1,20 @@
+redis-ha:
+  enabled: true
+
+controller:
+  replicas: 1
+  serviceAccount:
+    annotations:
+
+
+server:
+  replicas: 2
+  serviceAccount:
+    annotations:
+      
+
+repoServer:
+  replicas: 2
+
+applicationSet:
+  replicas: 2
