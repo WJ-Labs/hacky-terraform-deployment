@@ -5,7 +5,7 @@ module "google_container_cluster" {
 
   cluster_location = var.cluster_location
   cluster_name     = var.cluster_name
-  
+
   node_pools = var.node_pools
 }
 
