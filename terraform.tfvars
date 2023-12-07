@@ -41,7 +41,7 @@ helm_tools = [
     chart_version = "v1.6.3"
     namespace     = "certmanager"
     values = [
-      "helm/values/argocd.yaml"
+      "helm/values/certmanager.yaml"
     ]
   }
 ]
