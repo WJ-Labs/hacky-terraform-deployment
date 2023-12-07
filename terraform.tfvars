@@ -33,5 +33,15 @@ helm_tools = [
     values = [
       "helm/values/argocd.yaml"
     ]
+  },
+  {
+    name          = "hacky-certmanager"
+    repository    = "https://charts.jetstack.io"
+    chart         = "cert-manager"
+    chart_version = "v1.13.2"
+    namespace     = "certmanager"
+    values = [
+      "helm/values/certmanager.yaml"
+    ]
   }
 ]

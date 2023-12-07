@@ -1,0 +1,7 @@
+installCRDs: true
+featureGates: "ExperimentalGatewayAPISupport=true"
+extraArgs: 
+  - --issuer-ambient-credentials=true
+serviceAccount:
+  annotations:
+    iam.gke.io/gcp-service-account: hacky-automation@wj-labs-407316.iam.gserviceaccount.com
