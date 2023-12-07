@@ -15,6 +15,22 @@ repoServer:
   replicas: 2
   serviceAccount:
     name: hacky-argocd-repo-server
+    annotations:
+      iam.gke.io/gcp-service-account: hacky-automation@wj-labs-407316.iam.gserviceaccount.com
+  image:
+    repository: javierlga/argocd
+    tag: v2.7.3-amd64
+    imagePullPolicy: Always
+  containerSecurityContext:
+    runAsUser: 999
+    runAsNonRoot: true
+    readOnlyRootFilesystem: false
+    allowPrivilegeEscalation: false
+    seccompProfile:
+      type: RuntimeDefault
+    capabilities:
+      drop:
+      - ALL
 
 applicationSet:
   replicas: 2
