@@ -38,7 +38,7 @@ helm_tools = [
     name          = "hacky-certmanager"
     repository    = "https://charts.jetstack.io"
     chart         = "cert-manager"
-    chart_version = "v1.6.3"
+    chart_version = "v1.13.2"
     namespace     = "certmanager"
     values = [
       "helm/values/certmanager.yaml"
