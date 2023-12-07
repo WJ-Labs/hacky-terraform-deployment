@@ -24,5 +24,3 @@ connectInject:
 
 ui:
   enabled: true
-  service:
-    type: LoadBalancer
