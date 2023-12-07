@@ -6,15 +6,15 @@ controller:
   serviceAccount:
     annotations:
 
-
 server:
   replicas: 2
   serviceAccount:
     annotations:
-      
 
 repoServer:
   replicas: 2
+  serviceAccount:
+    name: hacky-argocd-repo-server
 
 applicationSet:
   replicas: 2
