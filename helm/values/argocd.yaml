@@ -19,7 +19,7 @@ repoServer:
       iam.gke.io/gcp-service-account: hacky-automation@wj-labs-407316.iam.gserviceaccount.com
   image:
     repository: javierlga/argocd
-    tag: v2.7.3-amd64
+    tag: v2.9.3
     imagePullPolicy: Always
   containerSecurityContext:
     runAsUser: 999

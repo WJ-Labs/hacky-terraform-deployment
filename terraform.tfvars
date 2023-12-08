@@ -28,7 +28,7 @@ helm_tools = [
     name          = "hacky-argocd"
     repository    = "https://argoproj.github.io/argo-helm"
     chart         = "argo-cd"
-    chart_version = "5.35.0"
+    chart_version = "5.51.6"
     namespace     = "argocd"
     values = [
       "helm/values/argocd.yaml"
